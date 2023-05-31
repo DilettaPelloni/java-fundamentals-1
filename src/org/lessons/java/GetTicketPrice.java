@@ -21,15 +21,19 @@ public class GetTicketPrice {
         //stabilisco il prezzo unitario
         double unitPrice = 0.21;
 
+        //stabilisco le percentuali di sconto
+        int youngDisPerc = 20;
+        int oldDisPerc = 40;
+
         //calcolo il prezzo del biglietto
         double price = km * unitPrice;
 
         //applico eventuali sconti
         if(age < 18){
-            price = price*80/100;
+            price = price*(100-youngDisPerc)/100;
         }
         if(age > 65) {
-            price = price*60/100;
+            price = price*(100-oldDisPerc)/100;
         }
 
         //formatto il prezzo creando un'istanza della classe DecimalFormat e usando la proprietà format
