@@ -17,9 +17,13 @@ public class GetTicketPrice {
         System.out.println("Inserisci l'età del passeggero:");
         int age = getInput.nextInt();
 
-        //stampo gli input
-        System.out.println(km);
-        System.out.println(age);
+        //stabilisco il prezzo unitario
+        double unitPrice = 0.21;
+
+        //calcolo il prezzo pieno
+        double fullPrice = km * unitPrice;
+
+
 
     }
 }
