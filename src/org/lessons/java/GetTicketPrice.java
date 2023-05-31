@@ -20,10 +20,19 @@ public class GetTicketPrice {
         //stabilisco il prezzo unitario
         double unitPrice = 0.21;
 
-        //calcolo il prezzo pieno
-        double fullPrice = km * unitPrice;
+        //calcolo il prezzo del biglietto
+        double price = km * unitPrice;
 
+        //applico eventuali sconti
+        if(age < 18){
+            price = price*80/100;
+        }
+        if(age > 65) {
+            price = price*60/100;
+        }
 
+        //stampo il prezzo finale
+        System.out.println("Il prezzo del biglietto è: " + price + "€");
 
     }
 }
