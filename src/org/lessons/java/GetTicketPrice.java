@@ -18,6 +18,9 @@ public class GetTicketPrice {
         System.out.println("Inserisci l'età del passeggero:");
         int age = getInput.nextInt();
 
+        //chiudo lo scanner
+        getInput.close();
+
         //stabilisco il prezzo unitario
         double unitPrice = 0.21;
 
@@ -37,10 +40,10 @@ public class GetTicketPrice {
         }
 
         //formatto il prezzo creando un'istanza della classe DecimalFormat e usando la proprietà format
-        String formattedPrice = new DecimalFormat("###,###.00").format(price);
+        String formattedPrice = new DecimalFormat("###,###.00€").format(price);
 
         //stampo il prezzo finale
-        System.out.println("Il prezzo del biglietto è: " + formattedPrice + "€");
+        System.out.println("Il prezzo del biglietto è: " + formattedPrice);
 
     }
 }

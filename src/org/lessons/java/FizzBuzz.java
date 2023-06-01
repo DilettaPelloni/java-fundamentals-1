@@ -23,15 +23,17 @@ public class FizzBuzz {
             //recupero il dato dell'utente
             totalNumbers = getInput.nextInt();
             //messaggio di errore se il numero è troppo piccolo
-            if(totalNumbers < minNum) {
+            if(totalNumbers <= minNum) {
                 System.out.println("Il numero non può essere minore di " + minNum + "!");
             }
             //messaggio di errore se il numero è troppo grande
-            if(totalNumbers > maxNum) {
+            if(totalNumbers >= maxNum) {
                 System.out.println("Il numero non può essere maggiore di " + (maxNum - 1) + "!");
             }
-        } while (totalNumbers < minNum || totalNumbers > maxNum );
+        } while (totalNumbers <= minNum || totalNumbers >= maxNum );
 
+        //chiudo lo scanner
+        getInput.close();
 
         //stampo i numeri da 1 a totalNumbers
         for (int i = 1; i <= totalNumbers; i++) {
